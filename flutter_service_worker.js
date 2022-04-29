@@ -6,33 +6,34 @@ const RESOURCES = {
   "assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
-"assets/NOTICES": "44487a2fa36bd05d231abde946a51be9",
+"assets/NOTICES": "4f3641e85947fffba37bf833141f4ea2",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
 "canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba",
 "canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
 "canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"firebase-messaging-sw.js": "2575ed5b4f9be94defdc24a46f4c20b3",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "d78ccc099ce5b1491101c8d73e64e342",
-"/": "d78ccc099ce5b1491101c8d73e64e342",
-"main.dart.js": "1c6e677c13217d0c22f341a9ed8ceecd",
-"manifest.json": "83d533e5ab22a8928a684b90a19bb48d",
-"version.json": "bfbd17afe282d88fd2a1bf20b3222282"
+"index.html": "954e40bc8ca5bfff872002b35aaef5a9",
+"/": "954e40bc8ca5bfff872002b35aaef5a9",
+"main.dart.js": "9969d85c9a214cd478c7f908eb34457f",
+"manifest.json": "70314969c3692e2c9c8a2ca8a469473a",
+"version.json": "bfb5f4df1b0a6b830d08b9009a9a2dcd"
 };
 
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = [
-  "./",
-"./main.dart.js",
-"./index.html",
-"./assets/NOTICES",
-"./assets/AssetManifest.json",
-"./assets/FontManifest.json"];
+  "/",
+"main.dart.js",
+"index.html",
+"assets/NOTICES",
+"assets/AssetManifest.json",
+"assets/FontManifest.json"];
 // During install, the TEMP cache is populated with the application shell files.
 self.addEventListener("install", (event) => {
   self.skipWaiting();

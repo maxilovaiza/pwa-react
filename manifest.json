@@ -1,6 +1,6 @@
 {
-    "name": "myapp",
-    "short_name": "myapp",
+    "name": "poc_push_notification",
+    "short_name": "poc_push_notification",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
