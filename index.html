@@ -98,7 +98,7 @@
 
     if ('serviceWorker' in navigator) {
       // Service workers are supported. Use them.
-      navigator.serviceWorker.register('./firebase-messaging-sw.js');
+      navigator.serviceWorker.register("/firebase-messaging-sw.js");
       window.addEventListener('load', function () {
         // navigator.serviceWorker.register('/firebase-messaging-sw.js');
         // Wait for registration to finish before dropping the <script> tag.
