@@ -69,7 +69,7 @@
       console.log(payload)
     })
     
-    messangin.onTokenRefresh(function(){
+    messaging.onTokenRefresh(function(){
       messaging.getToken().then(function(newToken){
         console.log("New Token:"+newToken)
       }).catch(function(reason){
