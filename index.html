@@ -38,7 +38,7 @@
  
   <script type="module">
     import { initializeApp,firebase } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js'
-    import {  } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-messaging.js"
+    import {messaging} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-messaging.js"
 
     const firebaseConfig = {
     apiKey: "AIzaSyDhZJ-6_gSC0rY0ldNQYbjzxPgwl3qeses",
@@ -51,12 +51,12 @@
     };
 
   // Initialize Firebase
-  const app = firebase.initializeApp(firebaseConfig);
+  const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 
-    const messaging = firebase.messaging();
+    const messag = messaging();
     function InitializeFireBaseMessaging(){
-      messaging.requestPermission().then(function(){
+      messag.requestPermission().then(function(){
         console.log("Notification Permission")
       }).then(function(token){
         console.log("Token:"+token);
@@ -65,12 +65,12 @@
         console.log(reason)
       })
     }
-    messaging.onMessage(function(payload){
+    messag.onMessage(function(payload){
       console.log(payload)
     })
     
-    messaging.onTokenRefresh(function(){
-      messaging.getToken().then(function(newToken){
+    messag.onTokenRefresh(function(){
+      messag.getToken().then(function(newToken){
         console.log("New Token:"+newToken)
       }).catch(function(reason){
         console.log(reason)
