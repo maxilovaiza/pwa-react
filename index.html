@@ -38,16 +38,28 @@
        https://developers.google.com/web/fundamentals/primers/service-workers -->
     <script type="module" src="https://www.gstatic.com/firebasejs/9.7.0/firebase-messaging.js"></script>
   <script>
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
-    initializeApp({
+   // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
     apiKey: "AIzaSyDhZJ-6_gSC0rY0ldNQYbjzxPgwl3qeses",
-    appId: "1:1051942780331:web:e871c416babdea5450a6ee",
-    messagingSenderId: "1051942780331",
-    projectId: "flutter-web-a1352",
     authDomain: "flutter-web-a1352.firebaseapp.com",
+    projectId: "flutter-web-a1352",
     storageBucket: "flutter-web-a1352.appspot.com",
-    measurementId: "G-J1H4CGPMVL",
-    });
+    messagingSenderId: "1051942780331",
+    appId: "1:1051942780331:web:e871c416babdea5450a6ee",
+    measurementId: "G-J1H4CGPMVL"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  
     const messaging = firebase.messaging();
     function InitializeFireBaseMessaging(){
       messaging.requestPermission().then(function(){
