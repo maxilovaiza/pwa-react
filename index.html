@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="https://maxilovaiza.github.io/pwa-react/#/">
+  <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -31,11 +31,11 @@
 
   <title>poc_push_notification</title>
   <link rel="manifest" href="manifest.json">
-  
 </head>
 <body>
- 
- 
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script type="module">
     import { initializeApp} from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js'
     import {getMessaging,onMessage,getToken} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-messaging.js"
@@ -58,7 +58,7 @@
       console.log(currentToken)
     })
     function InitializeFireBaseMessaging(){
-      messaging .requestPermission().then(function(){
+      Notification.requestPermission().then(function(){
         console.log("Notification Permission")
       }).then(function(token){
         console.log("Token:"+token);
@@ -73,17 +73,10 @@
   
     });
     
-    // messag.onTokenRefresh(function(){
-    //   messag.getToken().then(function(newToken){
-    //     console.log("New Token:"+newToken)
-    //   }).catch(function(reason){
-    //     console.log(reason)
-    //   })
-    // })
+    
 
     InitializeFireBaseMessaging();
-    
-    var serviceWorkerVersion = '3900899746';
+    var serviceWorkerVersion = '771778791';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
@@ -98,13 +91,9 @@
 
     if ('serviceWorker' in navigator) {
       // Service workers are supported. Use them.
-      
       window.addEventListener('load', function () {
-        // navigator.serviceWorker.register('/firebase-messaging-sw.js');
-        // Wait for registration to finish before dropping the <script> tag.
-        // Otherwise, the browser will load the script multiple times,
-        // potentially different versions.
-        navigator.serviceWorker.register("/firebase-messaging-sw.js");
+        navigator.serviceWorker.register('/firebase-messaging-sw.js');
+        
         var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
         navigator.serviceWorker.register(serviceWorkerUrl)
           .then((reg) => {

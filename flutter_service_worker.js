@@ -9,13 +9,13 @@ const RESOURCES = {
 "assets/NOTICES": "4f3641e85947fffba37bf833141f4ea2",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"firebase-messaging-sw.js": "2575ed5b4f9be94defdc24a46f4c20b3",
+"firebase-messaging-sw.js": "8f21683ac94ff8eccc322cc2682c4310",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "55a627255c355c900f7e34fa3cead6fe",
-"/": "55a627255c355c900f7e34fa3cead6fe",
+"index.html": "94ff1f92f5a1f849dee8b96c615aceef",
+"/": "94ff1f92f5a1f849dee8b96c615aceef",
 "main.dart.js": "9969d85c9a214cd478c7f908eb34457f",
 "manifest.json": "70314969c3692e2c9c8a2ca8a469473a",
 "version.json": "bfb5f4df1b0a6b830d08b9009a9a2dcd"
@@ -24,12 +24,12 @@ const RESOURCES = {
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = [
-  "./",
-"./main.dart.js",
-"./index.html",
-"./assets/NOTICES",
-"./assets/AssetManifest.json",
-"./assets/FontManifest.json"];
+  "/",
+"main.dart.js",
+"index.html",
+"assets/NOTICES",
+"assets/AssetManifest.json",
+"assets/FontManifest.json"];
 // During install, the TEMP cache is populated with the application shell files.
 self.addEventListener("install", (event) => {
   self.skipWaiting();
