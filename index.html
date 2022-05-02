@@ -92,7 +92,7 @@
     if ('serviceWorker' in navigator) {
       // Service workers are supported. Use them.
       window.addEventListener('load', function () {
-        navigator.serviceWorker.register('firebase-messaging-sw.js');
+        navigator.serviceWorker.register('./firebase-messaging-sw.js');
         
         var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
         navigator.serviceWorker.register(serviceWorkerUrl)
