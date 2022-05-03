@@ -85,7 +85,7 @@
 
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
-          navigator.serviceWorker.register("/pwa-react/firebase-messaging-sw.js");
+          navigator.serviceWorker.register("https://maxilovaiza.github.io/pwa-react/firebase-messaging-sw.js");
         });
         window.addEventListener("load", () => {
           navigator.serviceWorker.register("./flutter_service_worker.js");
