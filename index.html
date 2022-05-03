@@ -85,10 +85,10 @@
 
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
-          navigator.serviceWorker.register("firebase-messaging-sw.js",{scope: './'});
+          navigator.serviceWorker.register("firebase-messaging-sw.js",{scope: './pwa-react'});
         });
         window.addEventListener("load", () => {
-          navigator.serviceWorker.register("flutter_service_worker.js",{scope: './'});
+          navigator.serviceWorker.register("flutter_service_worker.js",{scope: './pwa-react'});
         });
       }
 
