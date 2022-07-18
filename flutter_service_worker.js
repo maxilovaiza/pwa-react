@@ -5,31 +5,51 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
-"assets/NOTICES": "4f3641e85947fffba37bf833141f4ea2",
+"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
+"assets/NOTICES": "98bc7d33cfb397158b229b27de381abc",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
+"canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
+"canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba",
+"canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
+"canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"firebase-messaging-sw.js": "54b52edd417a5747487e2d7aeb679593",
+"flutter.js": "eb2682e33f25cd8f1fc59011497c35f8",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "c48ef2298c979d79ea06195279df1c7e",
-"/": "c48ef2298c979d79ea06195279df1c7e",
-"main.dart.js": "9969d85c9a214cd478c7f908eb34457f",
-"manifest.json": "70314969c3692e2c9c8a2ca8a469473a",
-"version.json": "bfb5f4df1b0a6b830d08b9009a9a2dcd"
+"index.html": "b3c6600bc8e95bd35b880c6ca8a4d45a",
+"/": "596a558a361b45cf1273c7704ac4e216",
+"main.dart.js": "e43f8845c7315b8ed7bfd3e6c741e0e9",
+"manifest.json": "28a718183d98db438dbfa227ffbbf001",
+"unity/Build/NumberWizardUI2020-WebGL.data.unityweb": "63fc460a1f06752e870f6b87fbe64ce2",
+"unity/Build/NumberWizardUI2020-WebGL.json": "06cab6aa7c3185f3676337166c1e9206",
+"unity/Build/NumberWizardUI2020-WebGL.wasm.code.unityweb": "932e2a782a9ea93c4056e35fceee2c19",
+"unity/Build/NumberWizardUI2020-WebGL.wasm.framework.unityweb": "9117b932b931051d87ddca8535e95b1b",
+"unity/Build/UnityLoader.js": "9b952195ab79ef94f0feaae8cbb8d8ac",
+"unity/index.html": "596a558a361b45cf1273c7704ac4e216",
+"unity/TemplateData/favicon.ico": "57b5a31d2566cf227c47819eb3e5acfa",
+"unity/TemplateData/fullscreen.png": "f698ed7e8838ae7fef68b1423b6a3bc8",
+"unity/TemplateData/progressEmpty.Dark.png": "59cf8c9349b0be3828ea6ab0b7b7d126",
+"unity/TemplateData/progressEmpty.Light.png": "28df3e3bc879a2cffaaf78e371980f33",
+"unity/TemplateData/progressFull.Dark.png": "c74f81d50322b06afa5f20a1447a17ba",
+"unity/TemplateData/progressFull.Light.png": "d030ba7511bc275365f856d2af200e58",
+"unity/TemplateData/progressLogo.Dark.png": "cc0d7c1db16b413eb67aed0f10c3e99d",
+"unity/TemplateData/progressLogo.Light.png": "e608e32fb2102e953b6cae6f97f38286",
+"unity/TemplateData/style.css": "f174b271049153b3e9c4e483098e25d4",
+"unity/TemplateData/UnityProgress.js": "8560a078de48bb4ede068cbdd48a4938",
+"unity/TemplateData/webgl-logo.png": "8c9889fd3f9272b942d4868a9c1b094c",
+"version.json": "eaaf106427d142735ff51a6e81befdca"
 };
 
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = [
-  "./",
-"./main.dart.js",
-"./index.html",
-"./assets/NOTICES",
-"./assets/AssetManifest.json",
-"./assets/FontManifest.json"];
+  "main.dart.js",
+"index.html",
+"assets/NOTICES",
+"assets/AssetManifest.json",
+"assets/FontManifest.json"];
 // During install, the TEMP cache is populated with the application shell files.
 self.addEventListener("install", (event) => {
   self.skipWaiting();

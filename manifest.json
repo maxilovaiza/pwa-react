@@ -1,6 +1,6 @@
 {
-    "name": "poc_push_notification",
-    "short_name": "poc_push_notification",
+    "name": "unity",
+    "short_name": "unity",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
